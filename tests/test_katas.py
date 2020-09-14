@@ -16,12 +16,11 @@ class TestKatas(unittest.TestCase):
 
     def test_power(self):
         self.assertEqual(katas.power(4, 4), 256)
-        # self.assertRaises(katas.power, -1,)
+        self.assertRaises(ValueError, katas.power, -1, 0.5)
 
     def test_factorial(self):
-        self.assertEqual(katas.factorial(5), math.factorial(5))
-        # for i in range(10):
-        #     self.assertEqual(katas.factorial(i), math.factorial(i)
+        for i in range(14):
+            self.assertEqual(katas.factorial(i), math.factorial(i))
 
     def test_fibonacci(self):
         fib_list = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,
